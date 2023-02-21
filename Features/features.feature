@@ -23,24 +23,6 @@ Feature: Calculator Test
   Background: Launch the application
     Given User launch the application
 
-  @Addition
-  Scenario Outline: Verify Addition Test
-    When I enter <n1> and <n2> and perform the addition operation
-    Then Verify the Addition <result>
-
-    Examples: 
-      | n1      | n2     | result |
-      | 234234 | 345345 | 579579 |
-
-  @Substraction
-  Scenario Outline: Verify Substraction Test
-    When I enter <n1> and <n2> and perform the substraction operation
-    Then Verify the Multiplication <result>
-
-    Examples: 
-      | n1     | n2        | result   |
-      | 234823 | -23094823 | 23329646 |
-
   @Multiplication
   Scenario Outline: Verify Multiplication Test
     When I enter <n1> and <n2> and perform the multiplication operation
@@ -58,3 +40,21 @@ Feature: Calculator Test
     Examples: 
       | n1   | n2  | result |
       | 4000 | 200 |     20 |
+
+  @Addition
+  Scenario Outline: Verify Addition Test
+    When I enter <n1> and <n2> and perform the addition operation
+    Then Verify the Addition <result>
+
+    Examples: 
+      | n1     | n2     | result |
+      | 234234 | 345345 | 579579 |
+
+  @Substraction
+  Scenario Outline: Verify Substraction Test
+    When I enter <n1> and <n2> and perform the substraction operation
+    Then Verify the Multiplication <result>
+
+    Examples: 
+      | n1     | n2        | result   |
+      | 234823 | -23094823 | 23329646 |
